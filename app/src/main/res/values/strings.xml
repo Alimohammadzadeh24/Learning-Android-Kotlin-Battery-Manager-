@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BatteryManager</string>
+    <string name="app_name_title">Battery Manager</string>
+    <string name="fun_text">:)</string>
+    <string name="info_title">Check Yout Battery state</string>
+    <string name="voltage">Voltage</string>
+    <string name="technology">technology</string>
+    <string name="plug_state">Plug State</string>
+    <string name="temperature">temperature</string>
+</resources>
