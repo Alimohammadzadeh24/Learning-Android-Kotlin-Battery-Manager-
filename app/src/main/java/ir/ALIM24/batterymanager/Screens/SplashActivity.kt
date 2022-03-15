@@ -1,4 +1,4 @@
-package ir.ALIM24.batterymanager
+package ir.ALIM24.batterymanager.Screens
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
