@@ -7,4 +7,5 @@
     <string name="technology">technology</string>
     <string name="plug_state">Plug State</string>
     <string name="temperature">temperature</string>
+    <string name="check_battery_health">Check Battery Health</string>
 </resources>

@@ -24,10 +24,10 @@
         app:layout_constraintTop_toTopOf="@+id/chart_g3" />
 
     <TextView
-        android:layout_marginTop="@dimen/margin_large"
         android:id="@+id/btlevel_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
         android:text="50 %"
         android:textColor="@color/white"
         android:textSize="@dimen/large_text"
@@ -43,7 +43,7 @@
         android:src="@drawable/energy"
         app:layout_constraintBottom_toTopOf="@+id/chart_g5"
         app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
-        app:layout_constraintStart_toStartOf="@+id/circularProgressBar"/>
+        app:layout_constraintStart_toStartOf="@+id/circularProgressBar" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -51,30 +51,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1"/>
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/chart_g2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9"/>
+        app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/chart_g3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05"/>
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/chart_g4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4"/>
-
-
+        app:layout_constraintGuide_percent="0.4" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -82,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45"/>
+        app:layout_constraintGuide_percent="0.45" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -90,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22"/>
+        app:layout_constraintGuide_percent="0.22" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -176,9 +174,9 @@
             android:text="@string/voltage"
             android:textColor="@color/alpha_text_color"
             android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
-            android:textStyle="bold"/>
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/vol_text"
@@ -208,9 +206,9 @@
             android:text="@string/technology"
             android:textColor="@color/alpha_text_color"
             android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/img2"
-            app:layout_constraintTop_toTopOf="@+id/img2"
-            android:textStyle="bold"/>
+            app:layout_constraintTop_toTopOf="@+id/img2" />
 
         <TextView
             android:id="@+id/tech_text"
@@ -240,9 +238,9 @@
             android:text="@string/plug_state"
             android:textColor="@color/alpha_text_color"
             android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/img3"
-            app:layout_constraintTop_toTopOf="@+id/img3"
-            android:textStyle="bold"/>
+            app:layout_constraintTop_toTopOf="@+id/img3" />
 
         <TextView
             android:id="@+id/plug_text"
@@ -272,9 +270,9 @@
             android:text="@string/temperature"
             android:textColor="@color/alpha_text_color"
             android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/img4"
-            app:layout_constraintTop_toTopOf="@+id/img4"
-            android:textStyle="bold"/>
+            app:layout_constraintTop_toTopOf="@+id/img4" />
 
         <TextView
             android:id="@+id/temp_text"
@@ -299,22 +297,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/margin_large"
             android:background="@color/line"
             app:layout_constraintBottom_toTopOf="@+id/g2"
             app:layout_constraintEnd_toStartOf="@+id/g5"
-            app:layout_constraintStart_toStartOf="@+id/g4"
-            android:layout_marginEnd="@dimen/margin_large"/>
+            app:layout_constraintStart_toStartOf="@+id/g4" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_large"
             android:background="@color/line"
             app:layout_constraintBottom_toTopOf="@+id/g2"
             app:layout_constraintEnd_toStartOf="@+id/g6"
-            app:layout_constraintStart_toStartOf="@+id/g5"
-            android:layout_marginStart="@dimen/margin_large"/>
+            app:layout_constraintStart_toStartOf="@+id/g5" />
 
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/check_battery_health"
+            android:textSize="@dimen/medium_text"
+            app:layout_constraintEnd_toStartOf="@+id/g6"
+            app:layout_constraintStart_toStartOf="@+id/g4"
+            app:layout_constraintTop_toTopOf="@+id/g3"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/purple_500"
+            android:padding="16dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,6 +51,10 @@ class MainActivity : AppCompatActivity() {
             IntentFilter(Intent.ACTION_BATTERY_CHANGED),
         )
 
+        binding.btnCheck.setOnClickListener {
+            startActivity(Intent(this@MainActivity,BatteryHealth::class.java))
+        }
+
     }
 
     private var batteryInfoReceiver: BroadcastReceiver = object : BroadcastReceiver() {
@@ -75,6 +79,8 @@ class MainActivity : AppCompatActivity() {
             binding.circularProgressBar.setProgressWithAnimation(batteryLevel.toFloat(), 2000)
             binding.btlevelText.text = "$batteryLevel %"
         }
+
+
     }
 
 }
