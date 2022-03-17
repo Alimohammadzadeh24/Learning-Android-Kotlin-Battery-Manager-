@@ -57,11 +57,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     private var batteryInfoReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         @SuppressLint("SetTextI18n")
         override fun onReceive(context: Context, intent: Intent) {
             val batteryLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0)
             val batteryPlugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, 0)
+            val batteryHealth = intent.getIntExtra(BatteryManager.EXTRA_HEALTH , 0)
             binding.tempText.text =
                 (intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0) / 10).toString() + " °C"
             binding.volText.text =
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
             binding.circularProgressBar.progressMax = 100F
             binding.circularProgressBar.setProgressWithAnimation(batteryLevel.toFloat(), 2000)
-            binding.btlevelText.text = "$batteryLevel %"
+            binding.batteryLevelText.text = "$batteryLevel %"
         }
 
 
